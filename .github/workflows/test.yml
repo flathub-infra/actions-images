@@ -12,6 +12,10 @@ concurrency:
   group: actions_test-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  TEST_APPID: io.github.lo2dev.Echo
+  MANIFEST_NAME: io.github.lo2dev.Echo.json
+
 jobs:
   actions_tagged:
     permissions: {}
@@ -30,8 +34,8 @@ jobs:
     steps:
       - name: Clone the app
         run: |
-          git clone --depth=1 --branch master --single-branch --recursive https://github.com/flathub/org.gnome.Sudoku.git
-          cd org.gnome.Sudoku && rm -rf ".git"
+          git clone --depth=1 --branch master --single-branch --recursive https://github.com/flathub/${{ env.TEST_APPID }}.git
+          cd ${{ env.TEST_APPID }} && rm -rf ".git"
 
       - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
@@ -39,7 +43,7 @@ jobs:
           upload-artifact: false
           cache: false
           restore-cache: false
-          manifest-path: org.gnome.Sudoku/org.gnome.Sudoku.json
+          manifest-path: ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
           arch: ${{ matrix.variant.arch }}
           verbose: true
           branch: stable
@@ -47,7 +51,7 @@ jobs:
 
       - name: Run linter
         run: |
-          flatpak-builder-lint --exceptions manifest org.gnome.Sudoku/org.gnome.Sudoku.json
+          flatpak-builder-lint --exceptions manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
           flatpak-builder-lint --exceptions builddir flatpak_app
           flatpak-builder-lint --exceptions repo repo
 
@@ -68,8 +72,8 @@ jobs:
     steps:
       - name: Clone the app
         run: |
-          git clone --depth=1 --branch master --single-branch --recursive https://github.com/flathub/org.gnome.Sudoku.git
-          cd org.gnome.Sudoku && rm -rf ".git"
+          git clone --depth=1 --branch master --single-branch --recursive https://github.com/flathub/${{ env.TEST_APPID }}.git
+          cd ${{ env.TEST_APPID }} && rm -rf ".git"
 
       - uses: flatpak/flatpak-github-actions/flatpak-builder@master
         with:
@@ -77,7 +81,7 @@ jobs:
           upload-artifact: false
           cache: false
           restore-cache: false
-          manifest-path: org.gnome.Sudoku/org.gnome.Sudoku.json
+          manifest-path: ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
           arch: ${{ matrix.variant.arch }}
           verbose: true
           branch: stable
@@ -85,6 +89,6 @@ jobs:
 
       - name: Run linter
         run: |
-          flatpak-builder-lint --exceptions manifest org.gnome.Sudoku/org.gnome.Sudoku.json
+          flatpak-builder-lint --exceptions manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
           flatpak-builder-lint --exceptions builddir flatpak_app
           flatpak-builder-lint --exceptions repo repo
