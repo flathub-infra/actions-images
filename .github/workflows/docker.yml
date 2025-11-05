@@ -45,6 +45,10 @@ jobs:
             packages: org.kde.Platform//6.9 org.kde.Sdk//6.9
             remote: flathub
 
+          - name: kde-6.10
+            packages: org.kde.Platform//6.10 org.kde.Sdk//6.10
+            remote: flathub
+
     services:
       registry:
         image: registry:latest
