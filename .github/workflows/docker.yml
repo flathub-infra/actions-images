@@ -37,8 +37,8 @@ jobs:
             packages: org.kde.Platform//5.15-24.08 org.kde.Sdk//5.15-24.08
             remote: flathub
 
-          - name: kde-6.8
-            packages: org.kde.Platform//6.8 org.kde.Sdk//6.8
+          - name: kde-5.15-25.08
+            packages: org.kde.Platform//5.15-25.08 org.kde.Sdk//5.15-25.08
             remote: flathub
 
           - name: kde-6.9

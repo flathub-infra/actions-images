@@ -13,6 +13,6 @@ The following images are available:
 | GNOME           | 48         | `gnome-48`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48`          |
 | GNOME           | 49         | `gnome-49`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-49`          |
 | KDE             | 5.15-24.08 | `kde-5.15-24.08`    | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-5.15-24.08`    |
-| KDE             | 6.8        | `kde-6.8`           | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.8`           |
+| KDE             | 5.15-25.08 | `kde-5.15-25.08`    | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-5.15-25.08`    |
 | KDE             | 6.9        | `kde-6.9`           | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.9`           |
-| KDE             | 6.10        | `kde-6.10`           | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.10`           |
+| KDE             | 6.10       | `kde-6.10`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.10`          |
