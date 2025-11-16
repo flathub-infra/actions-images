@@ -117,10 +117,11 @@ jobs:
 
       - name: Write the Dockerfile for the ${{ matrix.runtime.name }} runtime
         run: |
-          cat >> ${{ matrix.runtime.name }}.Dockerfile << EOF
+          cat >> ${{ matrix.runtime.name }}.Dockerfile <<-EOF
           # syntax = docker/dockerfile:experimental
           FROM localhost:5000/base:latest
           RUN --security=insecure flatpak install -y --noninteractive ${{matrix.runtime.remote}} ${{ matrix.runtime.packages }}
+          EOF
 
       - name: Build & push the ${{ matrix.runtime.name }} image
         # 6.15.0
