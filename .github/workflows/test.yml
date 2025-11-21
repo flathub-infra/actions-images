@@ -55,6 +55,18 @@ jobs:
           flatpak-builder-lint --exceptions builddir flatpak_app
           flatpak-builder-lint --exceptions repo repo
 
+      - name: List refs
+        run: |
+          ostree refs --repo=repo
+
+      - name: Install
+        run: |
+          flatpak install --user -y --no-related --no-deps --reinstall ./repo ${{ env.TEST_APPID }}
+
+      - name: Info
+        run: |
+          flatpak info ${{ env.TEST_APPID }}
+
   actions_master:
     permissions: {}
     container:
@@ -92,3 +104,15 @@ jobs:
           flatpak-builder-lint --exceptions manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
           flatpak-builder-lint --exceptions builddir flatpak_app
           flatpak-builder-lint --exceptions repo repo
+
+      - name: List refs
+        run: |
+          ostree refs --repo=repo
+
+      - name: Install
+        run: |
+          flatpak install --user -y --no-related --no-deps --reinstall ./repo ${{ env.TEST_APPID }}
+
+      - name: Info
+        run: |
+          flatpak info ${{ env.TEST_APPID }}
