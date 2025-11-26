@@ -51,13 +51,9 @@ jobs:
 
       - name: Run linter
         run: |
-          flatpak-builder-lint --exceptions manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
-          flatpak-builder-lint --exceptions builddir flatpak_app
-          flatpak-builder-lint --exceptions repo repo
-
-      - name: List refs
-        run: |
-          ostree refs --repo=repo
+          flatpak-builder-lint --exceptions --debug manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
+          flatpak-builder-lint --exceptions --debug builddir flatpak_app
+          flatpak-builder-lint --exceptions --debug repo repo
 
       - name: Install
         run: |
@@ -101,13 +97,9 @@ jobs:
 
       - name: Run linter
         run: |
-          flatpak-builder-lint --exceptions manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
-          flatpak-builder-lint --exceptions builddir flatpak_app
-          flatpak-builder-lint --exceptions repo repo
-
-      - name: List refs
-        run: |
-          ostree refs --repo=repo
+          flatpak-builder-lint --exceptions --debug manifest ${{ env.TEST_APPID }}/${{ env.MANIFEST_NAME }}
+          flatpak-builder-lint --exceptions --debug builddir flatpak_app
+          flatpak-builder-lint --exceptions --debug repo repo
 
       - name: Install
         run: |
