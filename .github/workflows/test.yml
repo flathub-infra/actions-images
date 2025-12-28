@@ -13,8 +13,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  TEST_APPID: io.github.lo2dev.Echo
-  MANIFEST_NAME: io.github.lo2dev.Echo.json
+  TEST_APPID: io.github.kingorgg.Luna
+  MANIFEST_NAME: io.github.kingorgg.Luna.json
 
 jobs:
   actions_tagged:
