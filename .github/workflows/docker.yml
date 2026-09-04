@@ -25,6 +25,10 @@ jobs:
             packages: org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08
             remote: flathub
 
+          - name: freedesktop-26.08
+            packages: org.freedesktop.Platform//26.08 org.freedesktop.Sdk//26.08
+            remote: flathub
+
           - name: gnome-49
             packages: org.gnome.Platform//49 org.gnome.Sdk//49
             remote: flathub
