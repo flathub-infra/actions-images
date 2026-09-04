@@ -10,6 +10,7 @@ The following images are available:
 | --------------- | -----------| ------------------- | ------------------------------------------------------------------------|
 | Freedesktop SDK | 24.08      | `freedesktop-24.08` | `image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-24.08` |
 | Freedesktop SDK | 25.08      | `freedesktop-25.08` | `image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08` |
+| Freedesktop SDK | 26.08      | `freedesktop-26.08` | `image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-26.08` |
 | GNOME           | 49         | `gnome-49`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-49`          |
 | GNOME           | 50         | `gnome-50`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-50`          |
 | GNOME           | 51         | `gnome-51`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-51`          |
