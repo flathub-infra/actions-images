@@ -17,3 +17,4 @@ The following images are available:
 | KDE             | 5.15-25.08 | `kde-5.15-25.08`    | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-5.15-25.08`    |
 | KDE             | 6.9        | `kde-6.9`           | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.9`           |
 | KDE             | 6.10       | `kde-6.10`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.10`          |
+| KDE             | 6.11       | `kde-6.11`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.11`          |
