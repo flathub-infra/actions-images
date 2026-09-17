@@ -12,6 +12,7 @@ The following images are available:
 | Freedesktop SDK | 25.08      | `freedesktop-25.08` | `image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08` |
 | GNOME           | 49         | `gnome-49`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-49`          |
 | GNOME           | 50         | `gnome-50`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-50`          |
+| GNOME           | 51         | `gnome-51`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-51`          |
 | KDE             | 5.15-25.08 | `kde-5.15-25.08`    | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-5.15-25.08`    |
 | KDE             | 6.9        | `kde-6.9`           | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.9`           |
 | KDE             | 6.10       | `kde-6.10`          | `image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.10`          |
